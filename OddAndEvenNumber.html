@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd and even number</title>
+    <script>
+        var odd_or_even = function (inputnumber){
+            
+            if(inputnumber%2==0){
+                var text1 =inputnumber + " " + "is an even number."
+            document.getElementById("result").innerText = text1 }
+
+            else{
+                var text2 = inputnumber + " " + "is an odd number."
+                document.getElementById("result").innerText = text2
+            }
+        }
+       
+
+    </script>
+</head>
+<body>
+    <input  id="inputnumber" type="number">
+    <button onclick="odd_or_even(document.getElementById('inputnumber').value)">Check it</button>
+    <span>Result: </span>
+    <span id="result"></span>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuskish ID Number Check</title>
+    <script>
+        var id_check = function (idnumber){
+            
+           
+            if(idnumber.length==11 && idnumber%2==0){
+            var text1= "Your Id number : "+ idnumber
+            document.getElementById("result").innerText = text1}
+            else{ 
+            var text2 = "Please write your correct id number!!"
+            document.getElementById("result").innerText = text2}
+        
+        }
+
+    </script>
+</head>
+<body>
+    <p>Please write your id number: </p>
+    <span>Id: </span>
+    <input id="idnumber" type="number">
+    <button onclick="id_check(document.getElementById('idnumber').value)">Check it</button>
+    
+    <p id="result"></p>
+    
+</body>
+</html>
