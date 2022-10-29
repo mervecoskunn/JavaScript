@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        
+        }
+    </style>
+    <script>
+        var rotate= (value)=>{
+            document.getElementsByTagName('p')[0].innerText=value
+            document.getElementsByClassName('box')[0].setAttribute('style','transform: rotate(' + value + "deg" + ')')
+        
+        }
+    </script>
+</head>
+<body>
+    <input type="range" min ="0" max="360" name="range" onchange="rotate(document.getElementsByName('range')[0].value)">
+    <p></p>
+    <div class="box">
+
+    </div>
+    
+</body>
+</html>
