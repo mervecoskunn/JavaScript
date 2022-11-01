@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date-Time in JS</title>
+    <script>
+     var getValueByName=(name)=>{
+        return document.getElementsByName(name)[0].value
+    }
+    var getDate= (value)=>{
+        document.getElementsByTagName('p')[0].innerText=value
+    }
+    var dateDiff=(value)=>{
+        var today= new Date()
+
+        var selected_date=new Date(value)
+        
+        new Date(2022 , 0)
+        var yearDiff =today.getFullYear()-selected_date.getFullYear()
+
+        if(yearDiff>=18){
+            document.getElementsByTagName('p')[0].innerText="Login successful"
+        }
+        else
+        document.getElementsByTagName('p')[0].innerText="You are underage"
+    }
+
+    
+
+    </script>
+</head>
+<body>
+    <input type="date" name="date">
+    <button onclick="dateDiff(getValueByName('date'))">Choose 1</button>
+    <button onclick="dateDiff(document.getElementsByName('date')[0].value)">Choose 2</button>
+    <p></p>
+    
+    
+</body>
+</html>
