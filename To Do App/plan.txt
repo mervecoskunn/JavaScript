@@ -1,0 +1,8 @@
+1.HTML/CSS tasarimi (Bootstrap)
+2.Sabitleri tanimla
+3.EventListenerlari tanimla
+4.Yeni bir task eklenmesi
+5.Bir taskin silinmesi
+6.Tum tasklarin silinmesi
+7.Taskin guncellenmesi
+8.Local Storage uygulamasi

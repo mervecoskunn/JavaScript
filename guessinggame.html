@@ -5,16 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guessing Game in JS</title>
-   
-       
-
-       
-    
-
-
-  
+   <script>
+    var number= Math.ceil((Math.random()*10)+1)
+    var times=1
+    var guess=(element_id)=>{
+       var  input_number=document.getElementById(element_id).value
+       if(number==input_number & times<=5){
+        alert("God job!")
+    }
+    else if( times<=5 &  number!=input_number ){
+        alert("Try again! You can try "+ (5-times) + " times." )
+        times++
+    }
+    else{
+        alert("You cannot try more!")
+    }
+    }
+   </script>
 </head>
 <body>
-    
+    <input type="number" id="number_element_1" min="1" max="10">
+    <input type="number" id="number_element_2" min="1" max="10">
+    <input type="number" id="number_element_3" min="1" max="10">
+    <div>
+    <button type="button" onclick="guess('number_element_1')">Try it!</button>
+    <button type="button" onclick="guess('number_element_2')">Try it!</button>
+    <button type="button" onclick="guess('number_element_3')">Try it!</button>
+</div>
 </body>
 </html>
